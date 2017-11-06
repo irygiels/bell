@@ -63,11 +63,11 @@ public class DoorbellActivity extends Activity {
         if (keyCode == KeyEvent.KEYCODE_ENTER) {
             // Doorbell rang!
             Log.d(TAG, "button pressed");
-            Context context = getApplicationContext();
+            Context cont = getApplicationContext();
             CharSequence text = "Button is pressed!";
             int duration = Toast.LENGTH_SHORT;
 
-            Toast toast = Toast.makeText(context, text, duration);
+            Toast toast = Toast.makeText(cont, text, duration);
             toast.show();
             return true;
         }
