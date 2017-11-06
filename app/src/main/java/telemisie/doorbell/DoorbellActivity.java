@@ -1,11 +1,13 @@
 package telemisie.doorbell;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.widget.Toast;
 
 import com.google.android.things.contrib.driver.button.Button;
 import com.google.android.things.contrib.driver.button.ButtonInputDriver;
@@ -61,6 +63,12 @@ public class DoorbellActivity extends Activity {
         if (keyCode == KeyEvent.KEYCODE_ENTER) {
             // Doorbell rang!
             Log.d(TAG, "button pressed");
+            Context context = getApplicationContext();
+            CharSequence text = "Button is pressed!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
             return true;
         }
         return super.onKeyUp(keyCode, event);
