@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Doorbell</string>
+    <string name="image_content_description">Photo</string>
+
 </resources>
